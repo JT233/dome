@@ -18,10 +18,10 @@ public class FeignTestController {
     private IFeignTestService feignTestService;
 
     @GetMapping("/sayHello")
-    public Map<String,Object> sayHello() {
+    public Map<String,Object> sayHello(String name) {
 
         System.out.println("feign 调用服务提供者提供的服务 。。。 ");
-        Map<String,Object> map = feignTestService.sayHello();
+        Map<String,Object> map = feignTestService.sayHello(name);
 
         return map;
 
