@@ -18,11 +18,10 @@ public class HelloController {
     private IHelloService helloService;
 
     @GetMapping("/sayHello")
-    public Object sayHello() {
+    public Object sayHello(String name) {
         System.out.println("调用服务提供者的sayHello方法 。。。 ");
-        Map<String,Object> map = helloService.sayHello();
+        Map<String,Object> map = helloService.sayHello(name);
         return map;
     }
-
 
 }

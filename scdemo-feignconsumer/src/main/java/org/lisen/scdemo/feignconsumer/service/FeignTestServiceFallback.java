@@ -16,7 +16,7 @@ public class FeignTestServiceFallback implements IFeignTestService {
     public Map<String, Object> sayHello(String name) {
         Map<String,Object> map = new HashMap<>();
         map.put("code", 2);
-        map.put("msg", "服务提供者熔断 id=" + name);
+        map.put("msg", "服务提供者熔断 name =" + name);
         return map;
     }
 

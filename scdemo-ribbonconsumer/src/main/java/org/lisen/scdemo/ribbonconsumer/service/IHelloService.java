@@ -8,6 +8,6 @@ import java.util.Map;
  */
 public interface IHelloService {
 
-    Map<String,Object> sayHello();
+    Map<String,Object> sayHello(String name);
 
 }
