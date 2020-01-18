@@ -8,5 +8,9 @@
 * springclound02 分支
 用于演示注册中心集群
 
-* springclound03 分支 
-用于演示熔断器的基本使用
+* springclound03_01 分支 
+用于演示熔断器的基本使用, hytrix dashboard监控面板的基本使用（只能监控单个服务实例，如果
+需要监控集群服务则可参数springclound03_02分支）
+
+* springclound03_02 分支
+加入了Turbine集群监控面板配置示例。

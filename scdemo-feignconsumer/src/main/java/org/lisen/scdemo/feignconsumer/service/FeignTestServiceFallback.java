@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 该类定义熔断发生时的回调方法
  * @author Administrator
  * @create 2020-01-0719:35
  */
