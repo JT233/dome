@@ -21,7 +21,7 @@ public class HelloServiceImpl implements IHelloService {
     @HystrixCommand(fallbackMethod = "sayHelloFallback")
     @Override
     public Map<String,Object> sayHello(String name) {
-        Map<String,Object> rv = restTemplate.getForEntity("http://scdemo-provider/sayHello", HashMap.class, name).getBody();
+        Map<String,Object> rv = restTemplate.getForEntity("http://scdemo-provider/sayHello?name={1}", HashMap.class, name).getBody();
         for(Map.Entry entry: rv.entrySet()) {
             System.out.println(entry.getKey() + ":  " + entry.getValue());
         }

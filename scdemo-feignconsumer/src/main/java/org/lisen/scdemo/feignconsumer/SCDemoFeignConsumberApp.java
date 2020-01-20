@@ -21,7 +21,7 @@ public class SCDemoFeignConsumberApp {
 
     /*
      * 当配置hytrix检测平台时，需要配置这个servlet。不同版本的springclound可能会有所不同，
-     * 本示例所采用的springclound Greenwich.SR3 版本需要加入日下的servlet配置。
+     * 本示例所采用的springboot2.1.10，springclound Greenwich.SR3版本需要加入日下的servlet配置。
      * 否则会报404的异常。
      */
     @Bean
