@@ -13,14 +13,26 @@
     <artifactId>scdemo-provider</artifactId>
 
     <dependencies>
+
+        <!-- 提供web支持，springmvc，嵌入式web容器等 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!--
+        注意下面的配置，已被注册掉的是以前版本的配置，
+        在Greenwich.SR3版本中不能使用，如果使用已注释掉的配置则启动不报错，但不会向注册中心注册
+        -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-eureka-client</artifactId>
+        </dependency>-->
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
