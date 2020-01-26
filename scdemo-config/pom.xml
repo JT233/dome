@@ -9,49 +9,38 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>scdemo-feignconsumer</artifactId>
+    <artifactId>scdemo-config</artifactId>
 
     <dependencies>
 
-        <!-- 提供web支持，springmvc，嵌入式web容器等 -->
+        <!-- 配置中心检测，用于配置的动态刷新 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-monitor</artifactId>
         </dependency>
 
-        <!--eureka客户端支持，通过客户端将服务注册到eureka注册中心-->
+        <!-- eureka注册中心的客户端，用于向注册中心注册 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-        <!-- 提供feign支持，提供服务间调用框架，同时集成了熔断等功能 -->
+        <!-- 添加配置中心支持 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-
-        <!-- 服务熔断支持 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-        </dependency>
-
-        <!-- 服务监控 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-client</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
 
         <!-- 使用消息队列，实现配置中心配置修改后自动刷新生效 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+
+        <!-- 为springboot项目提供监控和管理端点 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
     </dependencies>

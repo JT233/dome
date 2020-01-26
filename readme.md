@@ -5,7 +5,7 @@
 环境说明：
 * jdk1.8.0_91
 * springboot 2.1.10.RELEASE
-* springclound Greenwich.SR3
+* springcloud Greenwich.SR3
 
 各分支说明：
 * springclound01 分支
@@ -24,3 +24,9 @@
 * springclound04 分支 
 加入zuul网关支持及网关的监控功能，网关提供了基于jwt的令牌认证支持，微服务的多版本发布支持，
 ribbonconsumer模块加入监控功能。
+
+* springclound05 分支
+加入配置中心支持，与该示例相配合的配置中心仓库为码云“scdemo-config-repo”（私有），
+加入spring cloud bus，支持配置文件的动态刷新。
+
+勘误：springclound =》springcloud
