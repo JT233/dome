@@ -1,0 +1,88 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka, http://peer2:8762/eureka
+
+server:
+  port: 8861
+
+spring:
+  application:
+    name: scdemo-config
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@gitee.com:lisenaq/scdemo-config-repo.git
+          ignore-local-ssh-settings: true
+          strict-host-key-checking: false
+          private-key: |
+                        -----BEGIN RSA PRIVATE KEY-----
+                        MIIJKAIBAAKCAgEAtq+ZxD+IzO1qVktcOrcwvuJ9s1WmLJr1bRtxhVGfZVwqpYEs
+                        T/jdq25EpL9L62bBGN+5N+fpn8JyHvB/Zudnggtlcmd5mVfu4VGE1H0p+jxXYeQu
+                        ncl60QcoLCcqYW4Ds4a0CX7Krj6mM9aSixx2nr976cG+ANMXAG/jv5J3ulnuMuOz
+                        uht3YXIuQJ2RAPQXMF6LSHsepnM1ZyPV/BU90Z7sc7KcJJLHiAxk4Ae+ZV9e6/FN
+                        O2Vks7Cb/9EWLopSwjPPA8/fBH1pUh8BX0tkwM9Eq9j/EWdmpW9u8z++yZQy7HSv
+                        tGJwazek795npxHgA8hHDal83avMWAVQMOMkdDChd49vhYqE2BpTEhTHb+d2xkbZ
+                        HvUJ/dO4l4G7LFsu8dwV7XQhn4mgD6y4clBGxNF0r2zh4jxEUAyr4G6Ha54vTsLN
+                        7c5wlJsjyG1qQ1+e12gXx66u4R9rFeZ+yX/TnL+MyOJagjrL/eoIMS7njxGHDq12
+                        PXRIba2bSGEqu3Dd9abseW60Nn1urH9UGAT6qX/fRUQGa6olLtRrSKptd05bNsaM
+                        5tWm1na9XO8k1lSF5fTRQ+AkfsZgAepLKLinNlm6x1qo7PgKXE9rfJgFptJ+OYej
+                        38pHOvZErStIkd2dLi/Pg93XruBAdMumrus0401bOIJJTQCiRwx2ESUS8YMCAwEA
+                        AQKCAgBp0enV/Z92ZQe1mM2BzV9VEskROkmZiOElJEJroU4dXnftipdqc5Ojm6nz
+                        bEPDxa+Qgvc85P805WNJfLGvn9cbQxKuZDXRl1ft+FRi6WWJZ66OK6i9CVo0/lpM
+                        yRsJeLp4IUzkOyeYKv4HBQG5xvEHH4/dZbZzr9KhFC7uZx8nOLR7kd4nrYVHUuZr
+                        01mNHdbY08sGXxrv+8gxSFbJQFygsdfxZMKBhOxDaDp+cr3c5pOLRCkigKcGVwTl
+                        9+1LZCBwEaaWZLCgXyzEvuUCmB9yeB0lFfsZz7VrmtK/4GrZRRkCUsz8RhEsaf0G
+                        XOPZqMcEKdzOkyCbHsqtKda7mrcgAlvCDwByZXalf3IiaCHbIgI4luyaE3uZKozP
+                        U3UzmZpqYeM5ItZy5oGhyUw84KW7om8XyySmbPcqzQZ1dfigFTYGDD7CLkUlltx5
+                        b3FRamjbPO8Zd+dF1k7veR5lO5tiDY6t9FX//pKmP/YxoMpvFay06LhuNcV6G4xm
+                        FCVC7coY/0kkdXMZKka3nyTOkB056UVzNQarignOhS0P/gXmultKrentC2Agja6w
+                        Xla+7ncPW5UavwJrex1GzW3RItOgtt316cLPR2XaFNWpVPUDdk2ez/xq2QW9QFko
+                        7qlZ5O9JuDtWvfls5KHjmMbIF7X5xKDPYDsAPejbbOkV0zqpgQKCAQEA8sxP1yUn
+                        VDU7HRN/i8hAs3UYyjqbSzUnGo8hjQdaiAE38GJcn5KUEDryFvFCAeqoypGQ+xNZ
+                        w7FlNOiwKp+hEh2GBefkHBBQo1TgUG1knNHkUayd+kah4d6zTWXvfI5kgRH81GWN
+                        swWAgFWzpxp9vMFBVxp40lNcO4Jnv3u18/enNFgpjfKUbkSD6nsfbpaqape2U2ha
+                        OEWnvLMLNV5aUMk72dt/w8gwYS9pVn+Zd1tvBvUeULPtW6Fk9DdVMvOJi405Own0
+                        eB1xNv9mGHM/GIyDK1JbFk/JsbyY11aSibotZt8drXQS7Ujknsyfd2WedWiXoEYh
+                        +94u/P6rJggA4QKCAQEAwJ6K9A/uoiW6pZx1pNGvAi0CB7fE35EFWPHTt4VjwCzS
+                        nRnRjgmCliHvGh0x+PfpUGMqIudhHjZshUsb5Y/lGr/hrIGYlh/8kR3RcR2ceSwa
+                        mzztGZ+Zol+OJdK3SIXaPuEdMzH7f9cudHGJ9YFZ/9GBSXuQh8RvKT/ih5Oz4ieG
+                        bGouCN7GUSUMLar0bV0y3tl/89QGyQEzj1qM4DqTzBliZ0z/Zgx6iRBRdcYLIOl4
+                        mOM9HyM+JnscQwtoDVnFyzTK4pYu/IoPlklGwFJMPn0inH7ev0POEoSy8DE4sz8d
+                        tGQV546nhUwuHnVb+atbKSZuweyBo/z128e1pj1q4wKCAQEAjEP2V/9x0hcSeIC8
+                        LZ/ZqRMb6DClaHRji9dmdZfq+ClkDK52fgVrHlk/ZHuqO3s6WhRwYmxSblh8dG18
+                        4JLptZJyy9SkloXiYAl3sV8RQfuL4JdNiLnnaZqDkVIzYYzNiTdADeBBVUv3aayZ
+                        Jg+K1lH7EnwLks5vuT1j/F5WxoOrB/VqxEOA9pcEcqEAjp3iA8Rzo4nknR+4gK4a
+                        6pEAsi0fM4O4Mv3i3TJLs5nxqd+bq7RN+CeKF2aM8P1Kbi39py5GAtKEdiPkNPal
+                        H7jsmZ0LZiqkzqX3ioO+9KBh9ckl04lQFtW43XZABXGHKq39Nizfc8swdNZt5OCn
+                        NUhoYQKCAQADm/TmldXW2/YfXEsoB3XMCKPdGShrOABtpjpdWfaAh1Z68xzmGG+F
+                        +KTOTHW/QIXyp6kGdmdvdX2bEck4B/Y3BhlobhU52ueUoIZoJDHmY1ksR3v52u+6
+                        ByhWtRgSF8/7FaTCbNFVl+aa7/Wxz/arwHU3t0UCBkA++Z95At+AAVWXenXaXLJC
+                        mvsbb/Sch/6IBnNLUlG+OnOI4B17ph1W2bLqVJsEgn9ZSiD8n/VdbIKB+uAOUU68
+                        0dm5t+D/Pwthv19912qR+NRJ8J2OxPwAv7+CRy5NTyvxVOM1dPanBSu9UZLHf/jL
+                        mp3SnEhY6UkQAFRa9d+H/xlsQNW6g7QZAoIBABnDHedqL3L6sLrkWqdpSvr9WTb2
+                        mJSdpvzCGXYOIjN11a0WkoVpkFjspP+9eZT+ypQTZkGSbfLYR+l5+nqgnI5nJ6Us
+                        3XKEunFtvINF/HqVnlPBdHA4QktcZsKe/8E5xFU6Rhyavfgjo+8pLztwmyNDHB9X
+                        dX2cUqp5CMMwXe0ugUn1hAOs56R80YAhR77G/InEIZ5gz4yBw28fiml23nt1h3fh
+                        DToZEjHMcCzI/7C0JttR92e4ZSkgTisPXOPp4l2woKmlyiVwNGh97+D5wTAve0pe
+                        aC7zHNHw47bnNnrYRxsPzysuVFLe9E6TDxzd1R3rIOgTkuTzRa+jFP9xQxc=
+                        -----END RSA PRIVATE KEY-----
+
+          search-paths: /**
+          username: lisenaq
+          password: lisenzhyxx123
+
+  rabbitmq:
+    host: 192.168.62.133
+    port: 5672
+    virtual-host: my_vhost
+    username: admin
+    password: admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
