@@ -25,8 +25,11 @@
 加入zuul网关支持及网关的监控功能，网关提供了基于jwt的令牌认证支持，微服务的多版本发布支持，
 ribbonconsumer模块加入监控功能。
 
-* springclound05 分支
+* springcloud05 分支
 加入配置中心支持，与该示例相配合的配置中心仓库为码云“scdemo-config-repo”（私有），
 加入spring cloud bus，支持配置文件的动态刷新。
+
+* springcloud06 分支
+为配置中心加入ssh加密通讯支持
 
 勘误：springclound =》springcloud
