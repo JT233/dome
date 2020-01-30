@@ -1,3 +1,5 @@
+#这里需要注意，如果使用properties格式的文件，则在配置文件中配置私钥时，每行的开始需要用“|”行尾用“\”连接，
+#而如果使用yml格式的配置文件则没有这样的要求，为方便起见，在此处建议使用yml格式的配置文件
 eureka:
   client:
     service-url:
@@ -17,6 +19,7 @@ spring:
           uri: git@gitee.com:lisenaq/scdemo-config-repo.git
           ignore-local-ssh-settings: true
           strict-host-key-checking: false
+          #注意此处有一个"|",如果省略了则会报私钥格式错误
           private-key: |
                         -----BEGIN RSA PRIVATE KEY-----
                         MIIJKAIBAAKCAgEAtq+ZxD+IzO1qVktcOrcwvuJ9s1WmLJr1bRtxhVGfZVwqpYEs
